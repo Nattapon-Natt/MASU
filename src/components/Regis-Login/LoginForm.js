@@ -343,15 +343,15 @@ const LoginForm = () => {
 
   return (
     <div className="container">
-      <main className="register-page">
+      <main className="login-page">
 
         <div className="text-center">
-          <h3 style={{fontWeight: 'bold'}}>เข้าสู่ระบบ</h3>
+          <h3 style={{ fontWeight: 'bold' }}>เข้าสู่ระบบ</h3>
         </div>
 
         <div className="row">
           <div className="col-lg-6">
-            <div className="register-box">
+            <div className="login-box">
               <form id="f-admin" className="needs-validation" noValidate>
                 {step === 1 && (
                   <div className="row g-4 step1 active">
@@ -400,9 +400,9 @@ const LoginForm = () => {
                       </Link>
                     </div>
                     <div className="col-md-12">
-                     
+
                     </div>
-                    <div style={{marginTop :'50px'}} className="col-md-6">
+                    <div style={{ marginTop: '50px' }} className="col-md-6">
                       <Link className="btn btn-idol-outline round" onClick={handleRegisterClick} to="/register" style={{ width: '100%' }}>
                         สมัครสมาชิก
                       </Link>
@@ -414,28 +414,28 @@ const LoginForm = () => {
                     <div className="col-12">
                       <div className="input-icons">
                         <img className="icon" src="assets/pic/user_icon.png" alt="User Icon" />
-                        <input 
-                          type="text" 
-                          className="form-control form-outline-idol" 
-                          id="username_login" 
-                          placeholder="ยูสเซอร์เนม หรือเบอร์โทร" 
+                        <input
+                          type="text"
+                          className="form-control form-outline-idol"
+                          id="username_login"
+                          placeholder="ยูสเซอร์เนม หรือเบอร์โทร"
                           name="username"
                           value={email}
-                          onChange={(e) => setEmail(e.target.value)} 
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
                     </div>
                     <div className="col-12">
                       <div className="input-icons">
                         <img className="icon" src="assets/pic/Password.png" alt="Password Icon" />
-                        <input 
-                          type="password" 
-                          className="form-control form-outline-idol" 
-                          placeholder="Password (พาสเวิร์ด)" 
-                          id="password_login" 
+                        <input
+                          type="password"
+                          className="form-control form-outline-idol"
+                          placeholder="Password (พาสเวิร์ด)"
+                          id="password_login"
                           name="password"
                           value={password}
-                          onChange={(e) => setPassword(e.target.value)} 
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                       </div>
                     </div>

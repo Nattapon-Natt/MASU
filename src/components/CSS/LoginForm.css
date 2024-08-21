@@ -1,4 +1,4 @@
-.register-page {
+.login-page {
     padding: 20px;
     font-family: kanit;
     border-radius: 5px;
@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-.register-box {
+.login-box {
     border-radius: inherit;
     padding: 20px;
 }
@@ -57,21 +57,13 @@
     border: none;
 }
 
-/* Input Styles */
 .input-icons {
     position: relative;
     display: flex;
     align-items: center;
     border-radius: 50px;
-}
-
-.input-icons img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 15px;
-    width: 20px;
-    height: 20px;
+    background-color: #f8f8f8;   
+    border: 1px solid #ccc;
 }
 
 .icon {
@@ -79,7 +71,7 @@
     padding: 10px;
     width: 40px;
     top: 50%;
-    left: 15px;
+    left: 10px;
     transform: translate(0%, -50%);
 }
 
@@ -98,11 +90,11 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .register-page {
+    .login-page {
         margin-top: 50px;
     }
 
-    .register-box {
+    .login-box {
         padding: 15px;
     }
 
@@ -124,11 +116,11 @@
 }
 
 @media (max-width: 576px) {
-    .register-page {
+    .login-page {
         margin-top: 20px;
     }
 
-    .register-box {
+    .login-box {
         padding: 10px;
     }
 
