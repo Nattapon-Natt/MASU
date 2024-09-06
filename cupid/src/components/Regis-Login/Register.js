@@ -190,7 +190,7 @@ const Register = () => {
                                             <div className="col-12">
                                                 <h5 style={{ marginBottom: '30px' }} className="tel-des">กรุณากรอกเบอร์มือถือ จำนวน 10 หลัก เพื่อยืนยัน OTP</h5>
                                                 <div className="input-icons">
-                                                    <img className="icon" src="assets/pic/user_icon.png" alt="User Icon" />
+                                                    <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" />
                                                     <input
                                                         type="text"
                                                         className="form-control form-outline-idol"

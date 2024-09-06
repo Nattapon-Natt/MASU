@@ -47,7 +47,7 @@ const Profile = () => {
 
                         <div className="location">
                             <div className="location-row">
-                                <img className="pin" src="/assets/pic/loc-pin2.png" alt="Location Pin" />
+                                <img className="pin" src="/project/masu/images/loc-pin2.png" alt="Location Pin" />
                                 <button className="des"><span className="loc">{idol.location}</span></button>
                             </div>
                             <div className="location-row">
@@ -56,8 +56,9 @@ const Profile = () => {
                             <div className="location-row">
                                 <button className="des"><span>{idol.age}</span></button>
                                 <button className="des">
-                                    <img className="gender" src="/assets/pic/gender.png" alt="Gender Icon" />
+                                    <img className="gender" src="/project/masu/images/gender.png" alt="Gender Icon" />
                                     <span>{idol.gender}</span>
+
                                 </button>
                             </div>
                         </div>
@@ -81,7 +82,7 @@ const Profile = () => {
                 <div className="row justify-content-center">
                     <div className="col-md-4 col-lg-3">
                         <Link className="backto-home" to="/" onClick={handleBackToHome}>
-                            <img src="/assets/pic/idol-arrow.png" alt="Back to Home" />
+                            <img src="/project/masu/images/idol-arrow.png" alt="Back to Home" />
                             กลับหน้าแรก
                         </Link>
                     </div>

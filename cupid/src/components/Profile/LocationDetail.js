@@ -83,7 +83,7 @@ const LocationDetail = () => {
                             window.scrollTo(0, 0);
                         }}
                     >
-                        <img src="/assets/pic/idol-arrow.png" alt="Back to Home" />
+                        <img src="/project/masu/images/idol-arrow.png" alt="Back to Home" />
                         กลับหน้าแรก
                     </Link>
                 </div>

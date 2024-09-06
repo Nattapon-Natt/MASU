@@ -413,7 +413,7 @@ const LoginForm = () => {
                   <div className="row g-3 step2">
                     <div className="col-12">
                       <div className="input-icons">
-                        <img className="icon" src="assets/pic/user_icon.png" alt="User Icon" />
+                        <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" />
                         <input
                           type="text"
                           className="form-control form-outline-idol"
@@ -427,7 +427,7 @@ const LoginForm = () => {
                     </div>
                     <div className="col-12">
                       <div className="input-icons">
-                        <img className="icon" src="assets/pic/Password.png" alt="Password Icon" />
+                        <img className="icon" src="/project/masu/images/Password.png" alt="Password Icon" />
                         <input
                           type="password"
                           className="form-control form-outline-idol"

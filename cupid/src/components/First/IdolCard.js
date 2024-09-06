@@ -52,7 +52,7 @@ const IdolCard = ({
     gender = 'Unknown', 
     location = 'Unknown', 
     description = 'No description available', 
-    imgSrc = '/assets/default-idol.png', 
+    imgSrc = 'assets/default-idol.png', 
     details = 'No details available' 
 }) => {
     return (
@@ -69,7 +69,7 @@ const IdolCard = ({
                         <button className="des-btn" aria-label={`Name: ${name}`} title={name}>{name}</button>
                         <button className="des-btn" aria-label={`Age: ${age}`} title={`Age: ${age}`}>{age}</button>
                         <button className="des-btn" aria-label={`Gender: ${gender}`} title={`Gender: ${gender}`}>
-                            <img className="gender-icon" src="/assets/pic/gender.png" alt="gender icon" />
+                            <img className="gender-icon" src="/project/masu/images/gender.png" alt="gender icon" />
                             {gender}
                         </button>
                     </div>

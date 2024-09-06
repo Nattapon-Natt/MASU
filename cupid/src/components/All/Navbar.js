@@ -14,7 +14,7 @@ function Navbar() {
     <nav className="nav">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src="/assets/pic/masu.png" alt="MASU-Logo"/>
+          <img src="/project/masu/images/masu.png" alt="MASU-Logo"/>
           MASU
         </Link>
         <div className="menu-icon" onClick={toggleMenu}>
