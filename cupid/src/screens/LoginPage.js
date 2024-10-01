@@ -1,12 +1,12 @@
 import React from 'react';
 import '../components/CSS/bg.css';
-import LoginForm from '../components/Regis-Login/LoginForm';
+import Login from '../components/Regis-Login/Login';
 
 const LoginPage = () => {
   return (
     <div className="body">
       <div className="">
-        <LoginForm />
+        <Login />
       </div>
     </div>
   );
