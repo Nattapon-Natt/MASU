@@ -1,0 +1,48 @@
+/* Description.css */
+
+.description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.description h2 {
+    margin: 0 0 15px;
+}
+
+.description textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    /* Minimum height for textarea */
+}
+
+.description button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.description button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .description {
+        padding: 15px;
+        /* Reduce padding on mobile */
+    }
+
+    .description button {
+        width: 100%;
+        /* Full width for button */
+    }
+}
