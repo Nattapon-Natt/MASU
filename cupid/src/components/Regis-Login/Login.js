@@ -42,7 +42,7 @@ const Login = () => {
                     </div>
                   </div>
                   <div className="col-md-12">
-                    <Link to="/loginform"
+                    <Link to="/loginmasu"
                       onClick={() => {
                         window.scrollTo(0, 0);
                       }}
@@ -64,7 +64,7 @@ const Login = () => {
                     </div>
                   </div>
                   <div className="col-md-12">
-                    <Link to="/loginform"
+                    <Link to="/loginesta"
                       onClick={() => {
                         window.scrollTo(0, 0);
                       }}

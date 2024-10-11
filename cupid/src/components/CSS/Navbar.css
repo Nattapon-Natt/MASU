@@ -36,7 +36,6 @@
   height: 85px;
   padding: 5px;
   margin-left: 30px;
-  /* mix-blend-mode: color-burn; */
   border-radius: 50%;
 }
 
@@ -68,6 +67,21 @@
   background-color: #1888ff;
   /* height:auto; */
   border-radius: 4px;
+}
+
+.nav-links.logout {
+  background-color: #f78e99;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links.logout:hover {
+  background-color: #ff1e2e;
 }
 
 @media screen and (max-width: 960px) {

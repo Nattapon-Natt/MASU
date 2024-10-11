@@ -1,36 +1,41 @@
-function Validation(values) {
-    let error = {}
-    const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
+// RegisterValidation.js
 
-    if (values.name === "") {
-        error.name = "กรุณาใส่ชื่อ"
-    }
-    else {
-        error.name = ""
-    }
+export default function Validation(values) {
+    let errors = {};
 
-    if (values.email === "") {
-        error.email = "กรุณาใส่ email"
-    }
-    else if (!email_pattern.test(values.email)) {
-        error.email = "ไม่พบ email นี้"
-    }
-    else {
-        error.email = ""
+    // ตรวจสอบเบอร์โทรศัพท์
+    if (!values.tel) {
+        errors.tel = "กรุณากรอกเบอร์โทรศัพท์";
+    } else if (!/^\d+$/.test(values.tel)) {
+        errors.tel = "กรุณากรอกเฉพาะตัวเลขเท่านั้น";
+    } else if (values.tel[0] !== '0') {
+        errors.tel = "เบอร์โทรศัพท์ต้องขึ้นต้นด้วย 0";
+    } else if (!/^0(6|8|9)/.test(values.tel)) {
+        errors.tel = "เบอร์โทรศัพท์ต้องขึ้นต้นด้วย 06, 08 หรือ 09 เท่านั้น";
+    } else if (values.tel.length !== 10) {
+        errors.tel = "เบอร์โทรศัพท์ต้องมี 10 ตัวอักษร";
     }
 
-    if (values.password === "") {
-        error.password = "กรุณาใส่ password"
+    // การตรวจสอบอื่นๆ (เช่นชื่อ, อีเมล, รหัสผ่าน)
+    if (!values.name) {
+        errors.name = "กรุณากรอกชื่อ";
     }
-    else if (!password_pattern.test(values.password)) {
-        error.password = "ไม่พบ password นี้"
-    }
-    else {
-        error.password = ""
+    
+    if (!values.lastname) {
+        errors.lastname = "กรุณากรอกนามสกุล";
     }
 
-    return error;
+    if (!values.email) {
+        errors.email = "กรุณากรอกอีเมล";
+    } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+        errors.email = "รูปแบบอีเมลไม่ถูกต้อง";
+    }
+
+    if (!values.password) {
+        errors.password = "กรุณากรอกรหัสผ่าน";
+    } else if (values.password.length < 8) {
+        errors.password = "รูปแบบรหัสผ่านไม่ถูกต้อง";
+    }
+
+    return errors;
 }
-
-export default Validation;
