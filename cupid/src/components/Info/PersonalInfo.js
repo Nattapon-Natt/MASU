@@ -94,7 +94,8 @@ function PersonalInfo() {
         }
         try {
             const email = localStorage.getItem('email');
-            await axios.put(`http://localhost:8081/profile/masu?email=${email}`, userData);
+            // await axios.put(`http://localhost:8081/profile/masu/?email=${email}`, userData);
+            await axios.put(`http://localhost:8081/profile/masu/${email}`, userData);
             // Update localStorage with new data
             for (const key in userData) {
                 localStorage.setItem(key, userData[key]);
@@ -192,8 +193,8 @@ function PersonalInfo() {
                     </div>
 
                     <div className="button-container">
-                        <button type="submit" className='save-btn'>บันทึก</button>
-                        <button type="button" className='cancel-btn' onClick={handleEditToggle}>ยกเลิก</button>
+                        <button type="submit" className='record'>บันทึก</button>
+                        <button type="button" className='cancel' onClick={handleEditToggle}>ยกเลิก</button>
                     </div>
                 </form>
             )}

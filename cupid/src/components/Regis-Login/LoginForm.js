@@ -17,7 +17,6 @@ export default function LoginForm({ setUserName }) {
         
         try {
             const res = await axios.post('http://localhost:8081/login', values);
-            // const res = await axios.post('https://thaiworkation.com/project/masu/login', values);
             if (res.data.status === "Success") {
                 // เก็บชื่อผู้ใช้และประเภทสมาชิกใน localStorage
                 localStorage.setItem('name', res.data.name);
@@ -48,8 +47,7 @@ export default function LoginForm({ setUserName }) {
                                         <div className="col-12">
                                             <h5 style={{ marginBottom: '30px' }} className="tel-des">กรุณากรอกรายละเอียดเพื่อทำการเข้าสู่ระบบ</h5>
                                             <div className="input-icons">
-                                                {/* <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" /> */}
-                                                <img className="icon" src="/assets/pic/user_icon.png" alt="User Icon" />
+                                                <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" />
                                                 <input
                                                     type="email"
                                                     onChange={handleInput}
@@ -65,8 +63,7 @@ export default function LoginForm({ setUserName }) {
                                             </div>
 
                                             <div className="input-icons">
-                                                {/* <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" /> */}
-                                                <img className="icon" src="/assets/pic/user_icon.png" alt="User Icon" />
+                                                <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" />
                                                 <input
                                                     type="password"
                                                     onChange={handleInput}

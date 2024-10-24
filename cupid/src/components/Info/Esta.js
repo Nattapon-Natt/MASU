@@ -44,7 +44,6 @@ function Esta() {
     const fetchUserData = async (email) => {
         try {
             const response = await axios.get(`http://localhost:8081/profile/esta?email=${email}`);
-            // const response = await axios.get(`https://thaiworkation.com/project/masu/profile/esta?email=${email}`);
             setUserData(response.data);
             // เก็บข้อมูลผู้ใช้ใน local storage
             localStorage.setItem('email', email);
@@ -80,8 +79,8 @@ function Esta() {
 
         try {
             const email = localStorage.getItem('email');
-            await axios.put(`http://localhost:8081/profile/esta?email=${email}`, userData);
-            // await axios.put(`https://thaiworkation.com/project/masu/profile/esta?email=${email}`, userData);
+            // await axios.put(`http://localhost:8081/profile/esta?email=${email}`, userData);
+            await axios.put(`http://localhost:8081/profile/esta/${email}`, userData);
             // อัปเดตข้อมูลใน local storage
             for (const key in userData) {
                 localStorage.setItem(key, userData[key]);

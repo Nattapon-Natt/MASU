@@ -26,8 +26,7 @@ export default function LoginEsta({ setUserName, setMemberType }) {
         if (!validateForm()) return; // หากมีข้อผิดพลาดให้ไม่ทำการส่งฟอร์ม
 
         try {
-            const res = await axios.post('http://localhost:8081/login-esta', values); 
-            // const res = await axios.post('https://thaiworkation.com/project/masu/login-esta', values); 
+            const res = await axios.post('http://localhost:8081/login-esta', values);
             if (res.data.status === "Success") {
                 // เก็บข้อมูลผู้ใช้ใน localStorage
                 const { name, lastname, nickname, dob, gender, province, tel, email,biography,philosophy, memberType } = res.data;
@@ -107,8 +106,7 @@ export default function LoginEsta({ setUserName, setMemberType }) {
 
 const InputField = ({ type, name, placeholder, value, onChange, error, autoComplete }) => (
     <div className="input-icons">
-        {/* <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" /> */}
-        <img className="icon" src="/assets/pic/user_icon.png" alt="User Icon" />
+        <img className="icon" src="/project/masu/images/user_icon.png" alt="User Icon" />
         <input
             type={type}
             name={name}
@@ -122,4 +120,3 @@ const InputField = ({ type, name, placeholder, value, onChange, error, autoCompl
         {error && <div className="mb-4 mt-1"><span className='text-danger'>{error}</span></div>}
     </div>
 );
-

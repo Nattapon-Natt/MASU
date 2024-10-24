@@ -13,13 +13,6 @@ const db = mysql.createConnection({
     database: "masu"
 });
 
-// const db = mysql.createConnection({
-//     host: "localhost",
-//     user: "arm2024_masu",
-//     password: "arm12345",
-//     database: "arm2024_masu"
-// });
-
 const port = 8081;
 app.listen(port, () => {
     console.log("Listening on port", port);
@@ -180,17 +173,46 @@ app.get('/profile/esta', (req, res) => {
 });
 
 // อัปเดตข้อมูลแม่สื่อ
+// app.put('/profile/masu/:email', (req, res) => {
+//     const { email } = req.params; // ดึง email จาก URL
+//     const { name, lastname, nickname, dob, gender, province, tel, biography, philosophy } = req.body;
+
+//     // ตรวจสอบค่าที่ได้รับจาก request body
+//     console.log('Updating user with email:', email);
+//     console.log('Data received:', req.body);
+
+//     // สร้าง SQL query สำหรับอัปเดตข้อมูล
+//     const sql = "UPDATE masus_register SET name = ?, lastname = ?, nickname = ?, dob = ?, gender = ?, province = ?, tel = ?, biography = ?, philosophy = ? WHERE email = ?";
+//     const values = [name, lastname, nickname, dob, gender, province, tel, biography, philosophy, email];
+
+//     db.query(sql, values, (err, result) => {
+//         if (err) {
+//             console.error("Error executing query:", err);
+//             return res.status(500).json({ message: "Error updating user data." });
+//         }
+
+//         console.log('Query result:', result);
+
+//         if (result.affectedRows > 0) {
+//             return res.status(200).json({ message: "User data updated successfully." });
+//         } else {
+//             return res.status(404).json({ message: "User not found." });
+//         }
+//     });
+// });
+
 app.put('/profile/masu/:email', (req, res) => {
-    const { email } = req.params; // ดึง email จาก URL
+    const { email } = req.params;
     const { name, lastname, nickname, dob, gender, province, tel, biography, philosophy } = req.body;
 
-    // ตรวจสอบค่าที่ได้รับจาก request body
-    console.log('Updating user with email:', email);
-    console.log('Data received:', req.body);
+    // ตรวจสอบค่าที่รับมาจาก request body
+    console.log('Request body:', req.body);
 
-    // สร้าง SQL query สำหรับอัปเดตข้อมูล
     const sql = "UPDATE masus_register SET name = ?, lastname = ?, nickname = ?, dob = ?, gender = ?, province = ?, tel = ?, biography = ?, philosophy = ? WHERE email = ?";
     const values = [name, lastname, nickname, dob, gender, province, tel, biography, philosophy, email];
+
+    // ตรวจสอบค่าที่ใช้ใน SQL Query
+    console.log('Values for update:', values);
 
     db.query(sql, values, (err, result) => {
         if (err) {
@@ -207,6 +229,7 @@ app.put('/profile/masu/:email', (req, res) => {
         }
     });
 });
+
 
 // อัปเดตข้อมูลสถานประกอบการโดยใช้ email แทน userId
 app.put('/profile/esta/:email', (req, res) => {
@@ -236,4 +259,3 @@ app.put('/profile/esta/:email', (req, res) => {
         }
     });
 });
-
